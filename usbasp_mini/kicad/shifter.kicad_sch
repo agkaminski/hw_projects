@@ -1,0 +1,1991 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "286de6be-526b-4112-b535-db9357f0e83b")
+	(paper "A5")
+	(title_block
+		(title "Logic level shifter")
+		(date "2025-06-08")
+		(rev "A")
+		(company "A.K.")
+	)
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:BS170F"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BS170F"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.diodes.com/assets/Datasheets/BS170F.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.15A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BS170F_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BS170F_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 44.45 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0bb71c09-0e69-4dc4-9e11-41ccb291bdb1")
+	)
+	(junction
+		(at 44.45 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1688136a-7ce1-4730-892a-92b625cc5317")
+	)
+	(junction
+		(at 64.77 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "589ededf-c54f-4999-b983-874c09af2eef")
+	)
+	(junction
+		(at 64.77 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "732f1331-7c30-4060-ac83-afbe1a61dbcb")
+	)
+	(junction
+		(at 44.45 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f9d6813-37e4-4dcf-9898-bf6cbb1fa0b7")
+	)
+	(junction
+		(at 44.45 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "854fdd9a-1c81-420e-9d5d-dedcb1746888")
+	)
+	(junction
+		(at 64.77 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "876151a0-e12e-4d75-8ba9-95674db1ddda")
+	)
+	(junction
+		(at 44.45 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9981b9a6-879a-4b71-af3a-6f7559485e91")
+	)
+	(junction
+		(at 44.45 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f0357a2-dd0b-4398-a391-5d44250331c0")
+	)
+	(junction
+		(at 64.77 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4eded9d-e983-42ec-ac64-c926c43371f2")
+	)
+	(junction
+		(at 64.77 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d248b517-38dc-48c7-9c63-8fa5674f2d02")
+	)
+	(junction
+		(at 44.45 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dfa45bac-2e9c-4294-9ac9-31c5d8910088")
+	)
+	(junction
+		(at 41.91 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e784bd44-e5e5-4812-98a1-d752660fde83")
+	)
+	(junction
+		(at 41.91 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8b45b60-2743-47f1-9257-737263b0272d")
+	)
+	(junction
+		(at 44.45 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f085f325-3473-4dbf-bdcd-cb662612de93")
+	)
+	(junction
+		(at 41.91 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa52120f-a8da-4366-80be-1c685d71413a")
+	)
+	(junction
+		(at 62.23 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff31ad92-d5b5-49a0-8d2a-580a397dbf59")
+	)
+	(junction
+		(at 62.23 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffc9163b-6868-46f4-98b7-241a1b2d35af")
+	)
+	(wire
+		(pts
+			(xy 41.91 26.67) (xy 41.91 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dd35e8e-6745-4b97-aa31-c3273b959706")
+	)
+	(wire
+		(pts
+			(xy 44.45 26.67) (xy 44.45 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fc9adcb-0b46-4af2-8e55-c89aeea0b538")
+	)
+	(wire
+		(pts
+			(xy 64.77 62.23) (xy 64.77 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "177013e7-313a-489d-a08e-f2851ae4d893")
+	)
+	(wire
+		(pts
+			(xy 64.77 26.67) (xy 64.77 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b63379-6bbc-4bd2-a40b-5d5b864083e9")
+	)
+	(wire
+		(pts
+			(xy 44.45 80.01) (xy 54.61 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "280b7066-5b53-4337-b560-c89b8c6ce95a")
+	)
+	(wire
+		(pts
+			(xy 64.77 44.45) (xy 64.77 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "287721e3-37f8-45aa-9398-bada0dce9e10")
+	)
+	(wire
+		(pts
+			(xy 44.45 44.45) (xy 44.45 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cf3883a-48fa-4a8b-a728-190ac4983718")
+	)
+	(wire
+		(pts
+			(xy 41.91 62.23) (xy 44.45 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33c4f02e-b5a6-4c08-a909-fc4d3d37750f")
+	)
+	(wire
+		(pts
+			(xy 40.64 26.67) (xy 41.91 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b316c88-3b70-4696-a09e-488077a955ee")
+	)
+	(wire
+		(pts
+			(xy 62.23 80.01) (xy 64.77 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4adc8ecf-db19-44ec-9e4c-d376bf0e92a3")
+	)
+	(wire
+		(pts
+			(xy 54.61 26.67) (xy 54.61 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "543aa795-bdbf-46c3-a59d-41b2c177e253")
+	)
+	(wire
+		(pts
+			(xy 64.77 26.67) (xy 62.23 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b5b1079-232a-4ef4-9c30-428ded9dcdae")
+	)
+	(wire
+		(pts
+			(xy 40.64 53.34) (xy 44.45 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f9a122e-0d4e-4b62-a6cc-5ce38d2ea135")
+	)
+	(wire
+		(pts
+			(xy 44.45 80.01) (xy 44.45 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60c7b622-0bf0-49bf-98c1-6d1c6088125c")
+	)
+	(wire
+		(pts
+			(xy 41.91 44.45) (xy 41.91 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6460f238-415b-409b-8cb6-0c7057eba1d2")
+	)
+	(wire
+		(pts
+			(xy 62.23 44.45) (xy 64.77 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bbcc970-fd39-4f35-ad89-4f07be9cc0ca")
+	)
+	(wire
+		(pts
+			(xy 54.61 80.01) (xy 54.61 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8ee581-6814-4f5c-a0d3-026fe4988d56")
+	)
+	(wire
+		(pts
+			(xy 44.45 71.12) (xy 49.53 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7001f7f4-fbd4-4dd6-b72e-f967c7b468ba")
+	)
+	(wire
+		(pts
+			(xy 41.91 62.23) (xy 41.91 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74f9c884-176c-40ce-b12b-b4d95aa51bf9")
+	)
+	(wire
+		(pts
+			(xy 59.69 71.12) (xy 64.77 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "765a4abf-640a-4fa5-92e8-bfb5231b319e")
+	)
+	(wire
+		(pts
+			(xy 44.45 44.45) (xy 54.61 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79b2377c-14bb-43e0-afb7-0ef1ac4d4098")
+	)
+	(wire
+		(pts
+			(xy 59.69 53.34) (xy 64.77 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a2350fd-2064-4149-a47d-a7126a9c40a9")
+	)
+	(wire
+		(pts
+			(xy 44.45 62.23) (xy 54.61 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d56fb07-2e24-4a16-a1fb-12ae81bace48")
+	)
+	(wire
+		(pts
+			(xy 40.64 88.9) (xy 44.45 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f599d89-19f1-4017-b0e3-a507f468a361")
+	)
+	(wire
+		(pts
+			(xy 54.61 62.23) (xy 54.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "815972cc-aeff-47a4-b6af-015fbf5a29ec")
+	)
+	(wire
+		(pts
+			(xy 44.45 62.23) (xy 44.45 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "822bc892-0d9e-4339-a151-a0be0c440683")
+	)
+	(wire
+		(pts
+			(xy 59.69 88.9) (xy 64.77 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f4e45b9-cc5c-4274-80f0-a73dbcef5117")
+	)
+	(wire
+		(pts
+			(xy 40.64 35.56) (xy 44.45 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "972f84fe-8abf-4722-9419-915732bb7670")
+	)
+	(wire
+		(pts
+			(xy 44.45 88.9) (xy 49.53 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9912b9ff-0bbc-4449-884c-480da72c8eab")
+	)
+	(wire
+		(pts
+			(xy 62.23 26.67) (xy 62.23 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a299f420-aaed-42f8-84f5-cc7c41bac8a8")
+	)
+	(wire
+		(pts
+			(xy 64.77 80.01) (xy 64.77 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a55548a3-79b2-4568-a75c-8f1455fa534e")
+	)
+	(wire
+		(pts
+			(xy 41.91 26.67) (xy 44.45 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2b96bf6-2410-4af9-9372-1eb947348d23")
+	)
+	(wire
+		(pts
+			(xy 54.61 44.45) (xy 54.61 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5efeedc-65a8-4e5c-8db6-a72ed2ea4ee2")
+	)
+	(wire
+		(pts
+			(xy 62.23 62.23) (xy 62.23 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7e8b3aa-fbbf-447d-92a6-5abe23e81126")
+	)
+	(wire
+		(pts
+			(xy 40.64 71.12) (xy 44.45 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bacd4b3c-255a-4844-a59d-bba05e6e4a2e")
+	)
+	(wire
+		(pts
+			(xy 62.23 62.23) (xy 64.77 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfdec87f-32da-4fb5-91e6-2c439ac6096a")
+	)
+	(wire
+		(pts
+			(xy 59.69 35.56) (xy 64.77 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c388ad82-a9df-4e2f-b8b7-c9e01588eb25")
+	)
+	(wire
+		(pts
+			(xy 62.23 44.45) (xy 62.23 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd4fe48a-85eb-4fdb-a197-4d7fe3e164ea")
+	)
+	(wire
+		(pts
+			(xy 64.77 88.9) (xy 68.58 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9238cfc-23f7-4ae6-a2cb-32ed8bc80be4")
+	)
+	(wire
+		(pts
+			(xy 64.77 71.12) (xy 68.58 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd84e88d-0e6d-417c-ba70-9f8599185837")
+	)
+	(wire
+		(pts
+			(xy 64.77 35.56) (xy 68.58 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e17e1b2d-9885-4da0-8f1b-ff9d80c25365")
+	)
+	(wire
+		(pts
+			(xy 64.77 53.34) (xy 68.58 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9d79658-65a6-49a2-a42c-fafe87a2ca41")
+	)
+	(wire
+		(pts
+			(xy 68.58 26.67) (xy 64.77 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee55892b-bc24-4a0d-b20e-656d9e68db56")
+	)
+	(wire
+		(pts
+			(xy 44.45 26.67) (xy 54.61 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eef0e5d5-d9f0-4f39-afca-9af12ca0a7d4")
+	)
+	(wire
+		(pts
+			(xy 41.91 80.01) (xy 44.45 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1366540-e8a8-4f41-a241-53d749cbf0e9")
+	)
+	(wire
+		(pts
+			(xy 41.91 44.45) (xy 44.45 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faeff63f-a440-417d-8335-e5a8edb3044a")
+	)
+	(wire
+		(pts
+			(xy 44.45 35.56) (xy 49.53 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff7649a1-9ace-472c-ad85-f9caac5632d9")
+	)
+	(wire
+		(pts
+			(xy 44.45 53.34) (xy 49.53 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffc46b17-8a15-4eba-a2f4-54daa5b6fa5c")
+	)
+	(hierarchical_label "LD0"
+		(shape bidirectional)
+		(at 40.64 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "046ef6af-037e-4602-9c6b-ae3f1897d008")
+	)
+	(hierarchical_label "LD3"
+		(shape bidirectional)
+		(at 40.64 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "109f3e22-c0ff-48fc-8b4e-d82118523912")
+	)
+	(hierarchical_label "LD1"
+		(shape bidirectional)
+		(at 40.64 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "29f7a148-5216-4fd6-a08a-5c59d085688b")
+	)
+	(hierarchical_label "LV"
+		(shape input)
+		(at 40.64 26.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "36635b3b-8c3e-4d68-9984-5b1ace5b37e2")
+	)
+	(hierarchical_label "HD3"
+		(shape bidirectional)
+		(at 68.58 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4ba42794-9aa8-4d0c-89b8-1142d85616cf")
+	)
+	(hierarchical_label "HD2"
+		(shape bidirectional)
+		(at 68.58 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7b688c68-b375-45f8-92b4-be1f3eece897")
+	)
+	(hierarchical_label "LD2"
+		(shape bidirectional)
+		(at 40.64 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c45b3b66-4cdb-4b42-8fd3-5a20ffc87444")
+	)
+	(hierarchical_label "HD1"
+		(shape bidirectional)
+		(at 68.58 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9d427ec-a505-4cf3-8c3f-4eb8b2ebbb7a")
+	)
+	(hierarchical_label "HV"
+		(shape input)
+		(at 68.58 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "da2d3f54-fa94-4cf4-914d-af1caef132eb")
+	)
+	(hierarchical_label "HD0"
+		(shape bidirectional)
+		(at 68.58 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f31be992-b358-4fcf-bbce-79d55c8cb8df")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37e1b163-5dfb-4def-ae96-c848094545c6")
+		(property "Reference" "R1"
+			(at 67.31 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 67.31 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 62.992 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "682c1dde-6c40-4b0e-a500-ba365036e9ce")
+		)
+		(pin "1"
+			(uuid "3afbaff2-155e-464f-a9fe-714910457eee")
+		)
+		(instances
+			(project ""
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4816afb6-88df-42d1-b426-5cf3a5bec3dc")
+		(property "Reference" "R7"
+			(at 46.99 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 46.99 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 42.672 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 44.45 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0d412227-8360-493a-b6c8-2548b1c4185a")
+		)
+		(pin "1"
+			(uuid "430b727d-f5d1-4c08-a657-6864462b5766")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BS170F")
+		(at 54.61 68.58 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "61ebdd7c-4cf9-48f7-bf2a-0c88fe8552ab")
+		(property "Reference" "Q3"
+			(at 54.61 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BS170F"
+			(at 54.61 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 52.705 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/BS170F.pdf"
+			(at 50.8 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.15A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 54.61 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "0b82e25c-29c2-49fb-b1de-c7c0c269d287")
+		)
+		(pin "1"
+			(uuid "b3dcead1-88a3-4804-8ae8-69521f71b929")
+		)
+		(pin "2"
+			(uuid "5feb98e2-bd39-444f-9c1f-0f059a99e0a9")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BS170F")
+		(at 54.61 86.36 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b44082e-d3cc-46ee-ab37-3f922bb38960")
+		(property "Reference" "Q4"
+			(at 54.61 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BS170F"
+			(at 54.61 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 52.705 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/BS170F.pdf"
+			(at 50.8 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.15A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 54.61 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "aa037038-7e30-448e-9227-b92f413b14ee")
+		)
+		(pin "1"
+			(uuid "77e713e6-cb85-41fd-ba43-34d1437eebc3")
+		)
+		(pin "2"
+			(uuid "1fa965eb-4b2b-4d5c-aed2-eba9f3120ad5")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f8976d9-4743-43f3-be90-02ee87280d8f")
+		(property "Reference" "R8"
+			(at 67.31 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 67.31 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 62.992 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "186b10a1-211b-4aa6-9251-2c4513bad908")
+		)
+		(pin "1"
+			(uuid "4d17f15b-11ee-4abf-b7bd-85b5230f48db")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "adcfb2d7-c9ee-4c00-9301-be92bfc384df")
+		(property "Reference" "R4"
+			(at 67.31 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 67.31 50.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 62.992 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6c669fc8-a957-4c73-882e-0e551945508c")
+		)
+		(pin "1"
+			(uuid "912f4fd0-3aeb-4e56-8623-a2ed1791a1e2")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba0b980d-9f7f-4282-9ddf-a6222662cd71")
+		(property "Reference" "R3"
+			(at 46.99 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 46.99 50.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 42.672 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 44.45 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "13b46184-0d45-4338-b723-ab83dd0ceb44")
+		)
+		(pin "1"
+			(uuid "cc44d745-1f26-4d3e-9f3e-dbc85bce782a")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bdce41d0-10e9-43bc-8ec5-d7a2e5803f07")
+		(property "Reference" "R5"
+			(at 46.99 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 46.99 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 42.672 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 44.45 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fbfae4da-b224-4310-905a-7e2a863f6c93")
+		)
+		(pin "1"
+			(uuid "e2c408f1-b833-455b-a286-4ce577e00877")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c12daf80-a85d-4cd5-863b-9afa24b97bfe")
+		(property "Reference" "R6"
+			(at 67.31 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 67.31 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 62.992 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7ad55adb-de15-438a-a41a-7b696c83e11a")
+		)
+		(pin "1"
+			(uuid "375f3f86-63da-41f4-ac08-324d1fef33f3")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BS170F")
+		(at 54.61 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9f50157-e983-4351-a610-7bc3e067db1a")
+		(property "Reference" "Q2"
+			(at 54.61 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BS170F"
+			(at 54.61 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 52.705 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/BS170F.pdf"
+			(at 50.8 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.15A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 54.61 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d8a7a84e-d158-4dc3-8c58-ea0cbe0e83f0")
+		)
+		(pin "1"
+			(uuid "6ba16df2-35ae-4967-b87a-96aead54d7f4")
+		)
+		(pin "2"
+			(uuid "3bc8d409-13c0-46c2-97bd-37086bca0cf3")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea5d6157-f19c-47cf-ac7e-275fae2b7a6c")
+		(property "Reference" "R2"
+			(at 46.99 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 46.99 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 42.672 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 44.45 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b14eb88e-1afa-415a-b424-138c1169aa98")
+		)
+		(pin "1"
+			(uuid "e9e6f87d-da73-41a5-ab34-5319b0cd0c3e")
+		)
+		(instances
+			(project "usbasp"
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BS170F")
+		(at 54.61 33.02 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb41f31a-3b0a-4640-8e39-23a75ac0be2b")
+		(property "Reference" "Q1"
+			(at 54.61 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BS170F"
+			(at 54.61 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 52.705 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/BS170F.pdf"
+			(at 50.8 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.15A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 54.61 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "271ba6ba-4123-4bf9-a3f2-ebebffe35ed4")
+		)
+		(pin "1"
+			(uuid "fc688ea4-0e52-4068-a3b3-05a77501e3ad")
+		)
+		(pin "2"
+			(uuid "f9f06043-72b5-4e6a-b312-cd71e6afe774")
+		)
+		(instances
+			(project ""
+				(path "/c3f881f0-0164-419c-9b32-edb8297cd271/404f17d7-40bf-421e-9337-74b20738c28b"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
