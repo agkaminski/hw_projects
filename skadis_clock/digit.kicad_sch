@@ -1,0 +1,2548 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "1a4bcb3c-c8cb-47f3-8365-a78d988ba85e")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 140.97 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4478c288-b5cd-4dd2-b8e2-62e7c52df7f6")
+	)
+	(junction
+		(at 100.33 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f04a66d-7e99-450c-88ea-1c22f33dca59")
+	)
+	(junction
+		(at 147.32 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6948bb25-5319-418b-8034-c226290322bd")
+	)
+	(junction
+		(at 140.97 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d9620b2-0e24-494a-975b-9b7e4e899240")
+	)
+	(junction
+		(at 120.65 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88918cf1-b936-456c-aa79-9ebad0bf7f46")
+	)
+	(junction
+		(at 147.32 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ebbdb744-f2f9-4a63-a199-9f94ad9cf598")
+	)
+	(wire
+		(pts
+			(xy 100.33 33.02) (xy 120.65 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05e80288-387d-4118-b1fc-d0904829c219")
+	)
+	(wire
+		(pts
+			(xy 140.97 114.3) (xy 147.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d76bb83-4880-48bb-839a-fc69c469a690")
+	)
+	(wire
+		(pts
+			(xy 109.22 165.1) (xy 118.11 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d07fdc0-f5f0-483a-8211-8fb311d31f86")
+	)
+	(wire
+		(pts
+			(xy 118.11 139.7) (xy 147.32 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3afbb4c3-fed8-4133-8318-5e46598b0b50")
+	)
+	(wire
+		(pts
+			(xy 130.81 88.9) (xy 140.97 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d705c4f-c71d-4d47-8dd9-088a1226cb07")
+	)
+	(wire
+		(pts
+			(xy 118.11 165.1) (xy 118.11 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42c97b25-e978-4f9f-8628-90a0210d1a45")
+	)
+	(wire
+		(pts
+			(xy 113.03 63.5) (xy 120.65 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4472fe00-7b2a-4936-9f56-ca2a30117264")
+	)
+	(wire
+		(pts
+			(xy 120.65 33.02) (xy 120.65 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49bf1149-ab7b-48f9-a6f1-8c4d9788ce30")
+	)
+	(wire
+		(pts
+			(xy 147.32 33.02) (xy 140.97 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51ca1de5-9fdb-484e-9075-f69cf42fff3f")
+	)
+	(wire
+		(pts
+			(xy 140.97 138.43) (xy 140.97 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b9fe9e2-a2fa-4981-9473-e21698f58972")
+	)
+	(wire
+		(pts
+			(xy 96.52 33.02) (xy 100.33 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d42f16d-ba52-43b0-bd7b-b61eb3de2f2a")
+	)
+	(wire
+		(pts
+			(xy 130.81 138.43) (xy 140.97 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86782b96-bd1e-4231-940e-31d094fe7431")
+	)
+	(wire
+		(pts
+			(xy 147.32 114.3) (xy 147.32 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dc9ab6b-6617-411c-8f8b-8a17b6a7c5cd")
+	)
+	(wire
+		(pts
+			(xy 110.49 113.03) (xy 119.38 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6935533-b092-4de8-8947-edfb4578d4ee")
+	)
+	(wire
+		(pts
+			(xy 140.97 33.02) (xy 120.65 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a69847a2-2fa7-4964-a767-79035e527159")
+	)
+	(wire
+		(pts
+			(xy 100.33 138.43) (xy 100.33 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a854f3dc-0aef-49f7-81a3-ac205597180d")
+	)
+	(wire
+		(pts
+			(xy 119.38 90.17) (xy 147.32 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a86d5c42-6762-4f6b-b106-6b9832c13cfe")
+	)
+	(wire
+		(pts
+			(xy 100.33 64.77) (xy 100.33 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abcf61ed-9376-4da4-ae79-9f6c5e79b32b")
+	)
+	(wire
+		(pts
+			(xy 91.44 138.43) (xy 100.33 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b91930ee-75f8-4f12-8e41-5e924d95bfa5")
+	)
+	(wire
+		(pts
+			(xy 93.98 88.9) (xy 100.33 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c17d9782-d003-43d9-bafc-88d1edbf82b9")
+	)
+	(wire
+		(pts
+			(xy 140.97 66.04) (xy 140.97 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c797b178-ec86-4a90-b6db-8bc5296e08e4")
+	)
+	(wire
+		(pts
+			(xy 100.33 114.3) (xy 140.97 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac08a53-4236-4f4b-91c7-bd680c93586c")
+	)
+	(wire
+		(pts
+			(xy 100.33 88.9) (xy 100.33 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb0a2edc-6f7d-4396-a700-080f577348ff")
+	)
+	(wire
+		(pts
+			(xy 147.32 90.17) (xy 147.32 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef533ea2-e961-433b-b107-bcc2418cba9e")
+	)
+	(wire
+		(pts
+			(xy 120.65 63.5) (xy 120.65 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f290a7c8-bef1-4aea-a806-087bcd3f1ce8")
+	)
+	(wire
+		(pts
+			(xy 147.32 139.7) (xy 147.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3de89b5-2963-4b0f-942d-ec99ba1fd73b")
+	)
+	(hierarchical_label "~{G}"
+		(shape input)
+		(at 110.49 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1b09774b-3228-47fa-8613-4638a3fd6952")
+	)
+	(hierarchical_label "~{C}"
+		(shape input)
+		(at 130.81 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "31203ef3-4f54-41f6-99e0-5730162cee96")
+	)
+	(hierarchical_label "~{E}"
+		(shape input)
+		(at 91.44 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "353b4934-6685-4f29-8a5b-aeb7d1c931fc")
+	)
+	(hierarchical_label "~{F}"
+		(shape input)
+		(at 93.98 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "585f1b8a-b7ae-44b2-81a0-609563c68970")
+	)
+	(hierarchical_label "~{B}"
+		(shape input)
+		(at 130.81 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6213207b-494e-4539-9e3b-fb53998315b0")
+	)
+	(hierarchical_label "~{A}"
+		(shape input)
+		(at 113.03 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "874f645b-559c-4f19-98bb-ea4c67079ca0")
+	)
+	(hierarchical_label "~{D}"
+		(shape input)
+		(at 109.22 165.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a97f0f39-b2a3-489b-8ae2-52e1e6cca75e")
+	)
+	(hierarchical_label "ANODE"
+		(shape input)
+		(at 96.52 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f843a8c8-b763-463b-b752-58c1a2ec9d22")
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 140.97 69.85 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20adaf36-6e62-400a-be25-3e6c2f4474da")
+		(property "Reference" "D13"
+			(at 138.43 72.7076 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 138.43 70.1676 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 140.97 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 140.97 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 140.97 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b94dd156-98dc-40e1-b2f1-ca9ca16f263a")
+		)
+		(pin "1"
+			(uuid "995656d1-e881-4f0e-90c7-88babddbbc29")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D27")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D41")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D55")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 119.38 93.98 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2fcce13d-f761-402d-843b-820bdf06052b")
+		(property "Reference" "D9"
+			(at 116.84 96.8376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 116.84 94.2976 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 119.38 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 119.38 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 119.38 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b76e982f-f942-4cab-83ea-7885af0ad690")
+		)
+		(pin "1"
+			(uuid "0b6ba97e-50d8-41dd-adfd-644307db788f")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D23")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D37")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D51")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 140.97 85.09 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a72a170-765f-4d6b-9aa5-726f0f7899f8")
+		(property "Reference" "R13"
+			(at 138.43 86.3601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 138.43 83.8201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 142.748 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 140.97 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b2b8256c-a293-46f8-b699-d48f01376e00")
+		)
+		(pin "1"
+			(uuid "fb37d76d-24fa-44e1-8089-6ef823762a4a")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R20")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R27")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R34")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 68.58 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ddd77ff-5315-4db7-875b-9cad486c34f7")
+		(property "Reference" "D3"
+			(at 97.79 71.4376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 97.79 68.8976 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "981f091d-a492-4a9b-9796-0def2512a6d2")
+		)
+		(pin "1"
+			(uuid "28efca9d-ce4c-408d-945e-cf3b7cd10285")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D17")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D31")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D45")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 120.65 58.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e0cead4-16e9-4f6e-9060-18b2adb63966")
+		(property "Reference" "R12"
+			(at 118.11 59.6901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 118.11 57.1501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 122.428 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 120.65 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a75f234e-7068-4dd2-bc4f-8a276c644acd")
+		)
+		(pin "1"
+			(uuid "8775f24e-e410-48ae-a3b6-c2e7bd5bea5b")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R19")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R26")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R33")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4062ae20-f728-42df-a532-5c9bf8c8261a")
+		(property "Reference" "D11"
+			(at 118.11 46.0376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 118.11 43.4976 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 120.65 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 120.65 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 120.65 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "973b1c10-dc05-4e2c-b368-4c8f308f4321")
+		)
+		(pin "1"
+			(uuid "7b792d77-e38e-4fb0-8065-980f36306efa")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D25")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D39")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D53")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 140.97 133.35 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "42f9070f-6f08-482e-b81d-e316155a3432")
+		(property "Reference" "R14"
+			(at 138.43 134.6201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 138.43 132.0801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 142.748 133.35 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 140.97 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "992660a3-65cb-4f52-accf-1c4fa3142e46")
+		)
+		(pin "1"
+			(uuid "85a25064-a81c-4a77-984c-f1b5dcb279ea")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R21")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R28")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R35")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 118.11 158.75 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a56b56f-d459-46f5-8396-146d7e197c95")
+		(property "Reference" "R10"
+			(at 115.57 160.0201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 115.57 157.4801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 119.888 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 118.11 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fdeb39fc-7534-4d2c-89a3-175ebd62ec9a")
+		)
+		(pin "1"
+			(uuid "43949bbd-0518-4f36-b003-df0c9853cd12")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R17")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R24")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R31")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 100.33 83.82 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b22d1b9-d21a-4a9e-8e94-7918e611cd92")
+		(property "Reference" "R8"
+			(at 97.79 85.0901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 97.79 82.5501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 102.108 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 100.33 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f92cbc09-3b69-42cc-a54a-78cecc6d2875")
+		)
+		(pin "1"
+			(uuid "e0807e7a-e7d0-42cf-be61-34d5f50be596")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R15")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R22")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R29")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 140.97 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c5c4f14-5cfc-45b5-9ac7-cce2aae1d243")
+		(property "Reference" "D14"
+			(at 138.43 80.3276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 138.43 77.7876 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 140.97 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 140.97 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 140.97 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9440807e-d0e2-484c-ab3f-0279fdd6e5ce")
+		)
+		(pin "1"
+			(uuid "bcccef02-35ea-4745-bf6c-454bc18b2c43")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D28")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D42")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D56")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 109.22 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "755d88f6-103b-49a6-ac71-a55721082ebf")
+		(property "Reference" "R11"
+			(at 116.84 110.4901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 116.84 107.9501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 121.158 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 119.38 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c38eb16a-b7ee-4b13-969b-f1d36d44de6f")
+		)
+		(pin "1"
+			(uuid "f22daa73-869f-4db9-86a1-caa3c293b62c")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R18")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R25")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R32")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8eb8f926-7dfb-46cf-80d5-a4a5bdb30059")
+		(property "Reference" "D4"
+			(at 97.79 79.0576 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 97.79 76.5176 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 100.33 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "89f852cb-c741-4fe4-8494-4809c5ea572a")
+		)
+		(pin "1"
+			(uuid "f67bb912-77ff-49fe-8a45-bc629f8ed67a")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D18")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D32")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D46")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 118.11 151.13 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94867f2e-e9e0-49f5-aca9-fdfa4e8e9482")
+		(property "Reference" "D8"
+			(at 115.57 153.9876 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 115.57 151.4476 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c1e4cd22-a99d-40f7-9cd3-54bbdc04e1f4")
+		)
+		(pin "1"
+			(uuid "a4ea9045-2911-4e4d-be87-9413f546d5b5")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D22")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D36")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D50")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 140.97 125.73 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d3cb3ac-f590-4fc5-a6d7-7ae692213181")
+		(property "Reference" "D16"
+			(at 138.43 128.5876 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 138.43 126.0476 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 140.97 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 140.97 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 140.97 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba97b86e-5544-487a-b78d-0df361e7c68e")
+		)
+		(pin "1"
+			(uuid "239736ce-b6c8-47de-a9ff-b9753c5f1612")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D30")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D44")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D58")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 118.11 143.51 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e48a817-ce9a-4bd5-a1c4-ee610bc48de9")
+		(property "Reference" "D7"
+			(at 115.57 146.3676 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 115.57 143.8276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 118.11 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 118.11 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 118.11 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "555a6ba0-adec-46ce-adce-30abe882eb39")
+		)
+		(pin "1"
+			(uuid "e53f9978-273a-4e5a-bd10-858fe47e63bf")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D21")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D35")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D49")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 119.38 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f437a1e-053f-436c-8bbc-d250607a1199")
+		(property "Reference" "D10"
+			(at 116.84 104.4576 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 116.84 101.9176 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a7f1f699-d3dc-4a35-baca-b9cb18cc194e")
+		)
+		(pin "1"
+			(uuid "6bfecb68-5f1a-48b5-82a8-47e0761d4c6a")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D24")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D38")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D52")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 125.73 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a41a325b-411d-4ce4-a84c-5d82f6e78a82")
+		(property "Reference" "D6"
+			(at 97.79 128.5876 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 97.79 126.0476 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "70cebe1c-5602-41dc-a647-058e484ac227")
+		)
+		(pin "1"
+			(uuid "74d7e5a7-9f51-4015-9f88-fead376c2f18")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D20")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D34")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D48")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d1bb25e5-bb70-498d-9e57-99b9298063b7")
+		(property "Reference" "D12"
+			(at 118.11 53.6576 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 118.11 51.1176 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "48e55cb1-7cdd-400d-98fe-21205bc964c6")
+		)
+		(pin "1"
+			(uuid "c74f20ed-c328-40b9-8867-f6e85048db0d")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D26")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D40")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D54")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 140.97 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9d272f8-6128-4669-aaa6-641cddfc65ef")
+		(property "Reference" "D15"
+			(at 138.43 120.9676 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 138.43 118.4276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 140.97 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 140.97 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 140.97 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e1b4e6bb-cd0a-4a4f-acef-2cc88cb81e48")
+		)
+		(pin "1"
+			(uuid "ee9759be-ac78-454c-aae6-e178d3c16267")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D29")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D43")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D57")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 100.33 133.35 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc4f2ffd-3763-4b70-b493-7f7b72e6f55d")
+		(property "Reference" "R9"
+			(at 97.79 134.6201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 97.79 132.0801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 102.108 133.35 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 100.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e0c88fc1-8509-4a57-9522-62ebde791e25")
+		)
+		(pin "1"
+			(uuid "209b2363-e7d0-4caa-8bad-0dc52171913c")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "R16")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "R23")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "R30")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fab1cbdd-48d3-4846-b731-5edf64288c37")
+		(property "Reference" "D5"
+			(at 97.79 120.9676 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 97.79 118.4276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 100.33 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7ca9a0f8-5a3d-4a25-9509-f5c05ddb531c")
+		)
+		(pin "1"
+			(uuid "5a4552c9-996a-4506-8e27-199a00eaec31")
+		)
+		(instances
+			(project "skadis_clock"
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/31a519e0-b680-416d-b051-7a59c95a34f5"
+					(reference "D19")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/6f9ed4a1-eea0-4add-b159-d8293437f6f6"
+					(reference "D33")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/7ea2a817-a290-4650-83cd-2cc2e2c65d85"
+					(reference "D47")
+					(unit 1)
+				)
+				(path "/a46493a2-de7d-48bd-b80b-72a49f192748/8aa6f9ba-72b4-4fd0-99b6-5d39b7a7471d"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
