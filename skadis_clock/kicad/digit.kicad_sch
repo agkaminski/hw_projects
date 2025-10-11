@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "1a4bcb3c-c8cb-47f3-8365-a78d988ba85e")
 	(paper "A4")
+	(title_block
+		(title "SKADIS LED clock digit")
+		(date "2025-10-11")
+		(rev "A")
+		(company "A. K.")
+	)
 	(lib_symbols
 		(symbol "Device:LED"
 			(pin_numbers

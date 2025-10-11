@@ -1,0 +1,504 @@
+/* Skadis LED clock Firmware
+ * Developed for Atmel ATTiny2313 MCU
+ * HW rev A
+ *
+ * Features of this FW:
+ * - 24 hour clock,
+ * - time setting via two buttons (one for minutes, one for hours),
+ * - long press button to set time faster,
+ * - blinking after power loss to indicate that the time is incorrect,
+ * - RTC calibration with 1 ppm precision (+- 999 ppms),
+ * - slow, gradual enabling/disabling changed screen segments (PWM),
+ * - brightness setting (0-7),
+ * - watchdog,
+ * - calibration and brighness storage on eeprom.
+ *
+ * Copyright 2022, 2025 Aleksander Kaminski
+ *
+ * Free for non-commercial use and education purposes.
+ */
+
+#include <avr/interrupt.h>
+#include <avr/io.h>
+#include <avr/sleep.h>
+#include <avr/wdt.h>
+#include <avr/eeprom.h>
+
+#define CPU_CLK          8000000UL
+#define BUTTON_COOLDOWN  200  /* In about 1 ms */
+#define BUTTON_LONGPRESS 2000 /* In about 1 ms */
+#define LONGPRESS_HZ     4    /* How fast is autopress working */
+#define BRIGHTNESS       50   /* Base brightness (x/256) */
+#define BRIGHTNESS_STEP  25
+#define LED_VOID         10   /* Code for empty digit */
+#define RTC_CALIB        0    /* +-ppm */
+#define RTC_HZ           2000
+#define RAMP_MIN         10   /* Minimal PWM (x/256) */
+#define RAMP_MAX         (BRIGHTNESS + (g_brightness * BRIGHTNESS_STEP) - 10)
+#define RAMP_INC         2    /* Increased on every screen refresh (122 Hz) */
+#define ADDR_CALIBRATION ((void *)0)
+#define ADDR_BRIGHNESS   ((void *)2)
+
+
+typedef unsigned char byte;
+
+
+int g_subseconds;
+unsigned int g_seconds_calib_cnt;
+byte g_seconds;
+byte g_minutes;
+byte g_hours = 12;
+byte g_time_set;
+
+byte g_led_on[4];
+byte g_led_rampup[4];
+byte g_led_rampdown[4];
+byte g_rampcnt = RAMP_MIN;
+byte g_curr_digit;
+
+unsigned int g_button_presscnt[2];
+enum {
+	button_not_active,
+	button_active,
+	button_longpress,
+	button_lockup
+} g_button_state[2] = { button_not_active, button_not_active };
+
+enum {
+	mode_normal = 0,
+	mode_calib,
+	mode_brightness,
+	mode_end
+} g_mode = mode_normal;
+byte g_mode_timeout;
+int g_rtc_calib = RTC_CALIB;
+byte g_brightness = 4;
+
+
+static void set_brightness(void)
+{
+	OCR0B = BRIGHTNESS + (g_brightness * BRIGHTNESS_STEP);
+}
+
+
+static void store_params(void)
+{
+	eeprom_write_word(ADDR_CALIBRATION, g_rtc_calib);
+	eeprom_write_word(ADDR_BRIGHNESS, g_brightness);
+}
+
+
+static inline void restore_params(void)
+{
+	byte dataok = 1;
+
+	g_rtc_calib = eeprom_read_word(ADDR_CALIBRATION);
+	g_brightness = eeprom_read_word(ADDR_BRIGHNESS);
+
+	if (g_rtc_calib > 999 || g_rtc_calib < -999) {
+		g_rtc_calib = RTC_CALIB;
+		dataok = 0;
+	}
+
+	if (g_brightness > 8) {
+		g_brightness = 4;
+		dataok = 0;
+	}
+
+	if (!dataok)
+		store_params();
+
+	set_brightness();
+}
+
+
+
+static inline void brightness_inc(void)
+{
+	if (g_brightness < 8)
+		++g_brightness;
+
+	set_brightness();
+}
+
+
+static inline void brightness_dec(void)
+{
+	if (g_brightness > 0)
+		--g_brightness;
+
+	set_brightness();
+}
+
+
+static inline void calib_inc(void)
+{
+	if (g_rtc_calib < 999)
+		++g_rtc_calib;
+}
+
+
+static inline void calib_dec(void)
+{
+	if (g_rtc_calib > -999)
+		--g_rtc_calib;
+}
+
+
+static void hours_inc(void)
+{
+	if (++g_hours >= 24)
+		g_hours = 0;
+
+	g_seconds = 0;
+}
+
+
+static void minutes_inc(void)
+{
+	if (++g_minutes >= 60) {
+		g_minutes = 0;
+		hours_inc();
+	}
+
+	g_seconds = 0;
+}
+
+
+static byte button_check(byte which)
+{
+	return !(PINB & (1 << (which + 6)));
+}
+
+
+static byte button_handle(byte which)
+{
+	byte trigger = 0;
+
+	if (button_check(which)) {
+		if (g_button_presscnt[which] < BUTTON_LONGPRESS) {
+			++g_button_presscnt[which];
+
+			/* Debouncing */
+			if (g_button_state[which] == button_not_active &&
+					g_button_presscnt[which] >= BUTTON_COOLDOWN) {
+				g_button_state[which] = button_active;
+				trigger = 1;
+			}
+		}
+		else if (g_button_state[which] != button_lockup) {
+			g_button_state[which] = button_longpress;
+		}
+	}
+	else {
+		g_button_state[which] = button_not_active;
+		g_button_presscnt[which] = 0;
+	}
+
+	return trigger;
+}
+
+
+static byte decode7seg(byte dig)
+{
+	static const byte lut[] = {
+		0x3f, /* 0 */
+		0x06, /* 1 */
+		0x5b, /* 2 */
+		0x4f, /* 3 */
+		0x66, /* 4 */
+		0x6d, /* 5 */
+		0x7d, /* 6 */
+		0x07, /* 7 */
+		0x7f, /* 8 */
+		0x6f, /* 9 */
+		0x00, /* LED_VOID */
+		0x7c, /* b */
+		0x39, /* c */
+		0x5e, /* d */
+		0x79  /* e */
+	};
+
+	return lut[dig];
+}
+
+
+/* This function handles updating each screen digit.
+ * Segments that are being enabled are not enabled
+ * instantly, instead are put in separate ramp-up
+ * register and being slowly lit on using PWM.
+ * Same applies to segments that are being disabled,
+ * but these are handled by ramp-down register.
+ * As PWM for ramp-up increased, at the same time
+ * PWM for ramp-down decreases. */
+static void update_digit(byte which, byte newval)
+{
+	g_led_on[which] |= g_led_rampup[which];
+	g_led_on[which] &= ~g_led_rampdown[which];
+
+	byte diff = g_led_on[which] ^ newval;
+
+	g_led_rampup[which] = diff & ~g_led_on[which];
+	g_led_rampdown[which] = diff & g_led_on[which];
+}
+
+
+static void set_ramp(byte val)
+{
+	if (val < RAMP_MIN)
+		val = RAMP_MIN;
+	else if (val > RAMP_MAX)
+		val = RAMP_MAX;
+
+	OCR0A = val;
+	g_rampcnt = val;
+}
+
+
+static void refresh_screen(int blanking)
+{
+	byte digit[4] = { LED_VOID, LED_VOID, LED_VOID, LED_VOID };
+
+	switch (g_mode) {
+		case mode_calib: {
+			int calib_tmp = g_rtc_calib;
+			if (calib_tmp < 0) {
+				digit[0] = 0xe;
+				calib_tmp = -calib_tmp;
+			}
+			else {
+				digit[0] = 0xc;
+			}
+
+			for (signed char i = 3; i > 0; --i) {
+				digit[i] = calib_tmp % 10;
+				calib_tmp /= 10;
+			}
+			break;
+		}
+
+		case mode_brightness:
+			digit[0] = 0xb;
+			digit[3] = g_brightness;
+			break;
+
+		default:
+			if (!blanking) {
+				digit[0] = g_hours / 10;
+				digit[1] = g_hours % 10;
+				digit[2] = g_minutes / 10;
+				digit[3] = g_minutes % 10;
+			}
+			break;
+	}
+
+	for (byte i = 0; i < 4; ++i)
+		update_digit(i, decode7seg(digit[i]));
+
+	set_ramp(RAMP_MIN);
+}
+
+
+static void set_dots(int state)
+{
+	PORTB &= ~(!state << 4);
+	PORTB |= !!state << 4;
+}
+
+
+static void button_action(byte which)
+{
+	/* switch()...case takes less flash space than funtion LUT */
+	switch (g_mode) {
+		case mode_calib:
+			if (!which)
+				calib_inc();
+			else
+				calib_dec();
+			break;
+
+		case mode_brightness:
+			if (!which)
+				brightness_inc();
+			else
+				brightness_dec();
+			break;
+
+		default:
+			if (!which)
+				minutes_inc();
+			else
+				hours_inc();
+			g_seconds = 0;
+			break;
+	}
+
+	g_mode_timeout = 0;
+}
+
+
+/* RTC IRQ 1/1024 of a second */
+ISR(TIMER1_COMPA_vect)
+{
+	byte update = 0, blanking = 0, btrigger = 0;
+
+	wdt_reset();
+
+	/* Every second */
+	if (++g_subseconds >= RTC_HZ) {
+		g_subseconds -= RTC_HZ;
+
+		/* Increment clock */
+		if (++g_seconds >= 60) {
+			minutes_inc();
+			update = 1;
+		}
+
+		if (!g_time_set)
+			update = 1;
+
+		/* Handle dots and screen blinking when time is not set */
+		if (g_seconds & 1) {
+			set_dots(0);
+			if (!g_time_set)
+				blanking = 1;
+		}
+		else {
+			set_dots(1);
+		}
+
+		/* Handle digital RTC calibration */
+		if (++g_seconds_calib_cnt >= RTC_HZ) {
+			g_subseconds += g_rtc_calib * 2;
+			g_seconds_calib_cnt = 0;
+		}
+
+		/* Handle special mode timeout */
+		if (g_mode != mode_normal && ++g_mode_timeout > 5) {
+			g_mode = mode_normal;
+			update = 1;
+			store_params();
+		}
+	}
+
+	/* Handle buttons */
+	if ((btrigger = button_handle(0)) != 0) {
+		button_action(0);
+	}
+	else if ((btrigger = button_handle(1)) != 0) {
+		button_action(1);
+	}
+	else if (g_button_state[0] == button_longpress &&
+			g_button_state[1] == button_longpress) {
+		if (++g_mode == mode_end) {
+			g_mode = mode_normal;
+			store_params();
+		}
+
+		g_button_state[0] = g_button_state[1] = button_lockup;
+		update = 1;
+	}
+	else if (!(g_subseconds % (RTC_HZ / LONGPRESS_HZ))) {
+		btrigger = 1;
+		if (g_button_state[0] == button_longpress)
+			button_action(0);
+		else if (g_button_state[1] == button_longpress)
+			button_action(1);
+		else
+			btrigger = 0;
+	}
+
+	if (btrigger) {
+		update = 1;
+		g_time_set = 1;
+	}
+
+	if (update)
+		refresh_screen(blanking);
+}
+
+
+/* Select new digit */
+ISR(TIMER0_OVF_vect)
+{
+	/* Enable on and ramp-up segments, ramp-down stay disabled */
+	PORTD = ~((g_led_on[g_curr_digit] |
+		g_led_rampup[g_curr_digit]) &
+		~g_led_rampdown[g_curr_digit]);
+
+	PORTB &= ~(1 << g_curr_digit);
+}
+
+
+/* Stop ramp-up, start ramp-down */
+ISR(TIMER0_COMPA_vect)
+{
+	if (g_rampcnt < RAMP_MAX) {
+		/* Disable ramp-up segments, enable ramp-down */
+		byte t = ~PORTD & ~(g_led_rampup[g_curr_digit]);
+		PORTD = ~(t | g_led_rampdown[g_curr_digit]);
+	}
+}
+
+
+/* Disable screen (brightness control) */
+ISR(TIMER0_COMPB_vect)
+{
+	PORTD = 0xff;
+	PORTB |= 0x0f;
+
+	g_curr_digit = (g_curr_digit + 1) % 4;
+
+	if (!g_curr_digit)
+		set_ramp(g_rampcnt + RAMP_INC);
+}
+
+
+int main(void)
+{
+	wdt_enable(WDTO_250MS);
+	wdt_reset();
+
+	/* Init screen */
+	PORTD = 0;
+	DDRD = 0x7f; /* MSB does not exist anyway */
+	PORTB |= 0xf;
+	DDRB |= 0xf;
+	refresh_screen(0);
+
+	/* Buttons - inputs, pull-up enable */
+	PORTB |= (1 << 6) | (1 << 7);
+
+	/* Timer1 - generate IRQ every 1/RTC_HZ of a second */
+	uint16_t ocr = CPU_CLK / RTC_HZ;
+	OCR1AL = ocr & 0xff;
+	OCR1AH = ocr >> 8;
+	/* Enable timer - no prescaling, CTC with OCR1A (mode 4) */
+	TCCR1A = 0;
+	TCCR1B = (1 << WGM12) | (1 << CS10);
+	/* Enable Output Compare A Match interrupt */
+	TIMSK |= (1 << OCIE1A);
+
+	/* Timer0 - screen management */
+	/* Update OCRx at MAX */
+	TCCR0A = (1 << WGM01) | (1 << WGM00);
+	set_ramp(RAMP_MIN);
+	set_brightness();
+	TIMSK |= (1 << OCIE0B) | (1 << TOIE0) | (1 << OCIE0A);
+	/* Enable counter (1/64 prescaler) */
+	TCCR0B = (1 << CS01) | (1 << CS00);
+
+	/* Fetch brighness and calibration from eeprom */
+	restore_params();
+
+	/* Whole operation is performed in interrupts.
+	 * Stay asleep if there's no interrupt active */
+	sleep_enable();
+	sei();
+
+	while (1)
+		sleep_cpu();
+
+	return 0;
+}
+
