@@ -460,14 +460,11 @@ int main(void)
 	wdt_reset();
 
 	/* Init screen */
-	PORTD = 0;
-	DDRD = 0x7f; /* MSB does not exist anyway */
-	PORTB |= 0xf;
-	DDRB |= 0xf;
+	PORTD = 0xff;  /* No diode is lit */
+	DDRD = 0x7f;   /* MSB does not exist anyway */
+	PORTB |= 0xff; /* Digit select + dot + buttons pull-ups */
+	DDRB |= 0x1f;  /* Digit select + dot output */
 	refresh_screen(0);
-
-	/* Buttons - inputs, pull-up enable */
-	PORTB |= (1 << 6) | (1 << 7);
 
 	/* Timer1 - generate IRQ every 1/RTC_HZ of a second */
 	uint16_t ocr = CPU_CLK / RTC_HZ;
