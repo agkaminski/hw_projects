@@ -483,7 +483,7 @@ int main(void)
 	set_brightness();
 	TIMSK |= (1 << OCIE0B) | (1 << TOIE0) | (1 << OCIE0A);
 	/* Enable counter (1/64 prescaler) */
-	TCCR0B = (1 << CS01) | (1 << CS00);
+	TCCR0B = (1 << CS01);
 
 	/* Fetch brighness and calibration from eeprom */
 	restore_params();
