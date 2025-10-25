@@ -25,17 +25,17 @@
 #include <avr/eeprom.h>
 
 #define CPU_CLK          8000000UL
-#define BUTTON_COOLDOWN  200  /* In about 1 ms */
-#define BUTTON_LONGPRESS 2000 /* In about 1 ms */
+#define BUTTON_COOLDOWN  100  /* In about 1 ms */
+#define BUTTON_LONGPRESS 1000 /* In about 1 ms */
 #define LONGPRESS_HZ     4    /* How fast is autopress working */
 #define BRIGHTNESS       50   /* Base brightness (x/256) */
 #define BRIGHTNESS_STEP  25
 #define LED_VOID         10   /* Code for empty digit */
 #define RTC_CALIB        0    /* +-ppm */
-#define RTC_HZ           2000
+#define RTC_HZ           1000
 #define RAMP_MIN         10   /* Minimal PWM (x/256) */
 #define RAMP_MAX         (BRIGHTNESS + (g_brightness * BRIGHTNESS_STEP) - 10)
-#define RAMP_INC         2    /* Increased on every screen refresh (122 Hz) */
+#define RAMP_INC         1    /* Increased on every screen refresh (122 Hz) */
 #define ADDR_CALIBRATION ((void *)0)
 #define ADDR_BRIGHNESS   ((void *)2)
 
@@ -369,7 +369,7 @@ ISR(TIMER1_COMPA_vect)
 
 		/* Handle digital RTC calibration */
 		if (++g_seconds_calib_cnt >= RTC_HZ) {
-			g_subseconds += g_rtc_calib * 2;
+			g_subseconds += g_rtc_calib;
 			g_seconds_calib_cnt = 0;
 		}
 
