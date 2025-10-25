@@ -467,12 +467,12 @@ int main(void)
 	refresh_screen(0);
 
 	/* Timer1 - generate IRQ every 1/RTC_HZ of a second */
-	uint16_t ocr = CPU_CLK / RTC_HZ;
-	OCR1AL = ocr & 0xff;
+	uint16_t ocr = (CPU_CLK / 8) / RTC_HZ;
 	OCR1AH = ocr >> 8;
-	/* Enable timer - no prescaling, CTC with OCR1A (mode 4) */
+	OCR1AL = ocr & 0xff;
+	/* Enable timer - prescale /8, CTC with OCR1A (mode 4) */
 	TCCR1A = 0;
-	TCCR1B = (1 << WGM12) | (1 << CS10);
+	TCCR1B = (1 << WGM12) | (1 << CS11);
 	/* Enable Output Compare A Match interrupt */
 	TIMSK |= (1 << OCIE1A);
 
