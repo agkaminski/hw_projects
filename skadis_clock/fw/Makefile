@@ -7,7 +7,7 @@ all: ledclock.c
 	size -A -d bin/ledclock
 
 fuse:
-	avrdude -c${ISP} -pt2313 -U lfuse:w:0xe4:m
+	avrdude -c${ISP} -pt2313 -U lfuse:w:0xee:m
 
 install:
 	avrdude -c${ISP} -pt2313 -U flash:w:bin/ledclock.hex:i
