@@ -35,7 +35,7 @@
 #define RTC_HZ           1000
 #define RAMP_MIN         10   /* Minimal PWM (x/256) */
 #define RAMP_MAX         (BRIGHTNESS + (g_brightness * BRIGHTNESS_STEP) - 10)
-#define RAMP_INC         1    /* Increased on every screen refresh (122 Hz) */
+#define RAMP_INC         2    /* Increased on every screen refresh (122 Hz) */
 #define ADDR_CALIBRATION ((void *)0)
 #define ADDR_BRIGHNESS   ((void *)2)
 
@@ -483,7 +483,7 @@ int main(void)
 	set_brightness();
 	TIMSK |= (1 << OCIE0B) | (1 << TOIE0) | (1 << OCIE0A);
 	/* Enable counter (1/64 prescaler) */
-	TCCR0B = (1 << CS01);
+	TCCR0B = (1 << CS01) | (1 << CS00);
 
 	/* Fetch brighness and calibration from eeprom */
 	restore_params();
