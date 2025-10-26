@@ -467,7 +467,7 @@ int main(void)
 	refresh_screen(0);
 
 	/* Timer1 - generate IRQ every 1/RTC_HZ of a second */
-	uint16_t ocr = (CPU_CLK / 8) / RTC_HZ;
+	uint16_t ocr = ((CPU_CLK / 8) / RTC_HZ) - 1;
 	OCR1AH = ocr >> 8;
 	OCR1AL = ocr & 0xff;
 	/* Enable timer - prescale /8, CTC with OCR1A (mode 4) */
